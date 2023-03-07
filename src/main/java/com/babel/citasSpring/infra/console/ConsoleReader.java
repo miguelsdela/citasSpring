@@ -3,6 +3,7 @@ package com.babel.citasSpring.infra.console;
 import com.babel.citasSpring.models.Cita;
 import com.babel.citasSpring.service.CitasService;
 
+import javax.annotation.PostConstruct;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -12,12 +13,13 @@ import java.util.Scanner;
 
 public class ConsoleReader {
     SimpleDateFormat fechaFormateador = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.forLanguageTag("es_ES"));
-    CitasService citasService;
+    private CitasService citasService;
 
     public ConsoleReader(CitasService citasService) {
         this.citasService = citasService;
     }
 
+    @PostConstruct
     public void ini() {
         Scanner sc = new Scanner(System.in);
         String entradaConsola;
