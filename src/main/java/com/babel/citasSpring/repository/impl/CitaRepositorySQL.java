@@ -4,17 +4,13 @@ import com.babel.citasSpring.models.Cita;
 import com.babel.citasSpring.repository.CitaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
 
-@Repository("Memory")
-public class CitaRepositoryMemory implements CitaRepository {
+@Repository("SQL")
+public class CitaRepositorySQL implements CitaRepository {
 
+    //Aqui declarariamos la libreria para manejar las consultas SQL
     private List<Cita> citas;
-
-    public CitaRepositoryMemory() {
-        citas = new ArrayList<>();
-    }
 
     @Override
     public void alta(Cita cita) {
