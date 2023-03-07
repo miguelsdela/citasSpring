@@ -2,6 +2,7 @@ package com.babel.citasSpring.infra.console;
 
 import com.babel.citasSpring.models.Cita;
 import com.babel.citasSpring.service.CitasService;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.text.ParseException;
@@ -11,6 +12,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
+@Component
 public class ConsoleReader {
     SimpleDateFormat fechaFormateador = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.forLanguageTag("es_ES"));
     private CitasService citasService;

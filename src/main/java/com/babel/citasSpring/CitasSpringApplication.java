@@ -9,7 +9,6 @@ public class CitasSpringApplication {
     public static void main(String[] args) {
         SpringApplication.run(CitasSpringApplication.class, args);
         //ConsoleReader consoleReader = new ConsoleReader(new CitasServiceImpl(new CitaRepositoryMemory()));
-        //consoleReader.ini();
     }
 
 }
